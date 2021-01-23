@@ -63,3 +63,8 @@ def DM():
     async def dm(ctx, member: discord.Member, reason):
         guild = ctx.guild
         await member.send(reason)
+
+def Clear():
+    @client.command()
+    async def clear(ctx, amount=2):
+        await ctx.channel.purge(limit=amount)
