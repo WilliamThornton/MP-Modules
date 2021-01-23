@@ -21,11 +21,9 @@ import discord
 import time
 import random
 from discord.ext import commands
-import wikipedia,os
 
 #client
 client = discord.Client()
-bot = commands.Bot(command_prefix="!")
 
 #function Command10()
 def Commmand10(main1, output1, main2, output2, main3, output3, main4, output4, main5, output5, main6, output6, main7, output7, main8, output8, main9, output9, main10, output10):
