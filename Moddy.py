@@ -3,8 +3,50 @@ from discord.ext import commands
 import Phoinex
 
 
-client = commands.Bot(command_prefix="!")
 
+
+
+
+
+
+#Enter prefix That Will Be The Start Of A Chat Command example-> command_prefix="!" How To Use Command In Chat-> !clear 2
+client = commands.Bot(command_prefix="")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if client.command_prefix == "":
+    print("Pleas Enter Command Prefix In Moddy!")
+    input()
+    quit()
 def MModPackage():
     #kick
     @client.command()
@@ -68,3 +110,6 @@ def Clear():
     @client.command()
     async def clear(ctx, amount=2):
         await ctx.channel.purge(limit=amount)
+
+
+
