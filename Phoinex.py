@@ -21,9 +21,11 @@ import discord
 import time
 import random
 from discord.ext import commands
+import wikipedia,os
 
 #client
 client = discord.Client()
+bot = commands.Bot(command_prefix="!")
 
 #function Command10()
 def Commmand10(main1, output1, main2, output2, main3, output3, main4, output4, main5, output5, main6, output6, main7, output7, main8, output8, main9, output9, main10, output10):
@@ -438,12 +440,37 @@ def Toxic7(ToxicW1, ToxicW2, ToxicW3, ToxicW4, ToxicW5, ToxicW6, ToxicW7):
 def N():
     list = ["William Thornton", "youtube -> https://www.youtube.com/channel/UCqjRkcOMi7ZUTMokFBfcY_g"]
     print("Made By:")
-    aaa = print(list[0])
-    bbb = print(list[1])
+    aaaa = "William Thornton"
+    bbbb = "youtube -> https://www.youtube.com/channel/UCqjRkcOMi7ZUTMokFBfcY_g"
+    aaa = print(aaaa)
+    bbb = print(bbbb)
 
-    is_local = "aaa" in locals()
-    is_local = "bbb" in locals()
+    is_locala = "aaa" in locals()
+    is_localb = "bbb" in locals()
     is_local = "list" in locals()
+    is_localbb = "bbbb" in locals()
+    is_localaa = "aaaa" in locals()
+
+    if is_localbb == False:
+        print("Invalid Copy!")
+        quit()
+    if is_localaa == False:
+        print("Invalid Copy!")
+        quit()
+
+    if is_locala == True:
+        aergwrgyjyujktyue = 987
+    elif is_locala == False:
+        print("Not Valid Copy!")
+        quit()
+    if is_localb == True:
+        fweruyjyuktuyktyukfg = 345
+    elif is_localb == False:
+        print("Not Valid Copy!")
+        quit()
+
+
+
 
     if is_local == True:
         regetrg = "ewiruogwhio"
@@ -468,6 +495,10 @@ def N():
             print("")
             print("valid copy =", is_global)
             print("Thank You For Using Phoinex!")
+            print("")
+            print("Update V.3")
+            print("Added:")
+            print("BotControl()")
             print("")
             print("")
         else:
@@ -581,3 +612,20 @@ def Toxic10(ToxicW1, ToxicW2, ToxicW3, ToxicW4, ToxicW5, ToxicW6, ToxicW7, Toxic
 
 def SkIp():
     g4et44 = "w4445hgw4hg095u"
+
+def BotControl(UseThisInChatToTurnOnBotControl):
+    @client.event
+    async def on_message(message):
+        if message.content == UseThisInChatToTurnOnBotControl:
+            while True:
+                say = input("Enter What Bot Will Say ->")
+
+                if say == ":end:":
+                    print(":~:Ended:~:")
+                    break
+                    quit()
+
+
+                await message.channel.send(say)
+                print(f"{client.user} Said", say)
+                print("Someone Said", message.content)
