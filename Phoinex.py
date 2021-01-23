@@ -494,11 +494,6 @@ def N():
             print("valid copy =", is_global)
             print("Thank You For Using Phoinex!")
             print("")
-            print("Update V.3")
-            print("Added:")
-            print("BotControl()")
-            print("")
-            print("")
         else:
             if is_global == False:
                 print("")
