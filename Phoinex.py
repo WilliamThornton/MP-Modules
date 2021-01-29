@@ -622,3 +622,32 @@ def BotControl(UseThisInChatToTurnOnBotControl):
                 await message.channel.send(say)
                 print(f"{client.user} Said", say)
                 print("Someone Said", message.content)
+
+
+def Chat():
+    @client.event
+    async def on_message(message):
+        #hi
+        greet = ["Helloooooo!", "Howdy!", "ok"]
+        if "hi" in message.content:
+            await message.channel.send(random.choice(greet))
+        if "hello" in message.content:
+            await message.channel.send(random.choice(greet))
+        if "echo" in message.content:
+            await message.channel.send("ECHOOO")
+        if "Echo" in message.content:
+            await message.channel.send("ECHOOO")
+        if "i hate you" in message.content:
+            await message.channel.send("Right Back At You!")
+        if "I Hate You" in message.content:
+            await message.channel.send("RIGHT BACK AT YOU!")
+        if "i love you" in message.content:
+            await message.channel.send("WeirdOOOO")
+        if "I Love You" in message.content:
+            await message.channel.send("WEIRDOOOOOOOOOOOOOOOOOOOOOOOO")
+        if "how" and "day" in message.content:
+            good = ["Great!", "Good!", "Awsome!"]
+            await message.channel.send(random.choice(good))
+        if "How" and "Day" in message.content:
+            good = ["Great!", "Good!", "Awsome!"]
+            await message.channel.send(random.choice(good))
